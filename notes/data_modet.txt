@@ -1,0 +1,73 @@
+
+
+Data Model
+---------------------------------------
+---------------------------------------
+
+Table: User
+
+Attributes:
+user_id PrimaryKey,
+name,
+email,
+password,
+payment_info
+
+---------------------------------------
+
+Table: Instructor
+
+Attributes:
+id PrimaryKey
+name 
+specialization
+
+---------------------------------------
+
+Table: Course
+
+Attributes:
+
+id PrimaryKey
+title
+description
+fee
+instruter_id ForeignKey
+
+---------------------------------------
+
+Table: class
+
+Attributes:
+
+id PrimaryKey
+course_id ForeignKey
+date
+time
+topic
+zoom_link
+is_completed
+recording_link
+
+---------------------------------------
+
+Table: Enrollment
+Attributes:
+
+id PrimaryKey
+user_id ForeignKey
+class_id ForeignKey
+enrollment_date
+payment_status
+
+---------------------------------------
+
+Table: Certificate 
+
+Attributes:
+
+id primary_key, 
+enrollment_id ForeignKey, 
+is_generated 
+download_link
+issue_date
